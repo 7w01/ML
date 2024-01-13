@@ -1,23 +1,23 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-#input data
+# input data
 data = np.genfromtxt("data.csv", delimiter=',')
 x_data = data[:, 0]
 y_data = data[:, 2]
 plt.scatter(x_data, y_data)
 plt.show()
 
-#learning rate
+# learning rate
 lr = 0.0000001
-#intercept
+# intercept
 b = 0
-#slope
+# slope
 k = 0
-#epochs
+# epochs
 epochs = 50
 
-#Least Square
+# Least Square
 def cost_function(b, k, x_data, y_data):
     total_error = 0
     for i in range(0, len(x_data)):
@@ -43,7 +43,7 @@ print("Running...")
 b, k = gradient_descent(x_data, y_data, b, k, lr, epochs)
 print("After {0} iterations b = {1}, k = {2}, error = {3}".format(epochs, b, k, cost_function(b, k, x_data, y_data)))
 
-#graph
+# graph
 plt.plot(x_data, y_data, 'b.')
 plt.plot(x_data, k * x_data + b, 'r')
 plt.show()
