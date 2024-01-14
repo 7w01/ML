@@ -17,6 +17,7 @@ ax = plt.figure().add_subplot(111, projection='3d')
 ax.scatter(x_data[:, 0], x_data[:, 1], y_data, c='r', s=100)
 x0 = x_data[:, 0]
 x1 = x_data[:, 1]
+
 # generate grid matrix
 x0, x1 = np.meshgrid(x0, x1)
 z = model.intercept_ + x0 * model.coef_[0] + x1 * model.coef_[1]

@@ -5,8 +5,8 @@ import matplotlib.pyplot as plt
 # input data
 data = np.genfromtxt('data.csv', delimiter=',')
 # format conversion
-x_data = data[:, 0, np.newaxis]
-y_data = data[:, 2, np.newaxis]
+x_data = data[:, 0, np.newaxis]# LinearRegression requires x must be 2d
+y_data = data[:, 2]# No specific requirements for y
 plt.scatter(x_data, y_data)
 plt.show()
 
