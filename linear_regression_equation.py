@@ -4,10 +4,10 @@ import matplotlib.pyplot as plt
 # input data
 data = np.genfromtxt('data.csv', delimiter=',')
 x_data = data[:, 0, np.newaxis]# because x and y will be transformed into a matrix
-y_data = data[:, -1,np.newaxis]
+y_data = data[:, -1, np.newaxis]
 
 # add intercepts
-X_data = np.concatenate((np.ones((len(x_data),1)),x_data), axis=1)# concatenate x with ones
+X_data = np.concatenate((np.ones((len(x_data), 1)), x_data), axis=1)# concatenate x with ones
 
 
 def weights(x_arr, y_arr):

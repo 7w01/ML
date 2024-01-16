@@ -4,9 +4,9 @@ from sklearn.preprocessing import PolynomialFeatures
 from sklearn.linear_model import LinearRegression
 
 # input data
-data = np.genfromtxt('data_.csv', delimiter=',')
+data = np.genfromtxt('poly.csv', delimiter=',')
 x_data = data[:, 0, np.newaxis]
-y_data = data[:, 1, np.newaxis]
+y_data = data[:, 1]
 
 # polynomial conversion
 poly = PolynomialFeatures(degree=3)
