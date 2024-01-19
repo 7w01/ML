@@ -12,6 +12,7 @@ y_data = data[:, 1]
 poly = PolynomialFeatures(degree=3)
 x_poly = poly.fit_transform(x_data)
 # [1,2,3] -> [[1,1,1],[1,2,3],[1,4,9],[1,16,27]]
+print(x_data)
 print(x_poly)
 
 # linear model

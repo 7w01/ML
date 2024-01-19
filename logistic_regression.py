@@ -29,7 +29,8 @@ def plot():
             x1.append(x_data[i][0])
             y1.append(x_data[i][1])
             z1.append(x_data[i][2])
-    #graph
+
+    # graph
     ax = plt.figure().add_subplot(111, projection='3d')
     scatter0 = ax.scatter(x0, y0, z0, c='r', marker='x')
     scatter1 = ax.scatter(x1, y1, z1, c='b', marker='o')
@@ -51,7 +52,7 @@ def sigmoid(x):
     return 1.0 / (1 + np.exp(-x))
 
 
-def cost_function(xMat,yMat, Ws):
+def cost_function(xMat, yMat, Ws):
     return 1 / len(y_data) * np.sum(np.multiply(yMat, xMat * Ws) - np.log(1 + np.exp(xMat * Ws)))
 
 
